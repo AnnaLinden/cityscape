@@ -307,6 +307,8 @@
       --window-color2: #777;
       --window-color3: #777;
       --window-color4: #777;
+      --star-color-A: white;
+      --star-color-B: transparent;
     }
     .sky {
       background: radial-gradient(
@@ -316,6 +318,83 @@
           #445 21%,
           #223 100%
         );
+    }
+    .circle {
+      position: absolute;
+      /*width: 10px;
+      height: 10px;
+      left: 100px;
+      top: 20px; */
+      background-color: var(--star-color-A);
+      border-radius: 50%;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      /*animation-direction: alternate;*/
+    }
+    
+    .blink_1 {
+      animation-name: blink10;
+    }
+    
+    .blink_2 {
+      animation-name: blink20;
+    }
+    
+    .blink_3 {
+      animation-name: blink30;
+    }
+    
+    .blink_4 {
+      animation-name: blink40;
+    }
+    
+    .blink_5 {
+      animation-name: blink50;
+    }
+    
+    @keyframes blink10 {
+      0%, 100% {
+        background-color: var(--star-color-A);
+      }
+      20% {
+        background-color: var(--star-color-B);
+      }
+    }
+    
+    @keyframes blink20 {
+      0%, 100% {
+        background-color: var(--star-color-B);
+      }
+      40% {
+        background-color: var(--star-color-A);
+      }
+    }
+    
+    @keyframes blink50 {
+      0%, 100% {
+        background-color: var(--star-color-A);
+      }
+      50% {
+        background-color: var(--star-color-B);
+      }
+    }
+    
+    @keyframes blink30 {
+      0%, 100% {
+        background-color: var(--star-color-A);
+      }
+      60% {
+        background-color: var(--star-color-B);
+      }
+    }
+    
+    @keyframes blink40 {
+      0%, 100% {
+        background-color: var(--star-color-B);
+      }
+      80% {
+        background-color: var(--star-color-A);
+      }
     }
   }
       
